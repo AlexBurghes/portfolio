@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Biome Balance</title>
+        <link href="stylesPortfolio.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="pageWrapper">
+            <h1>PC Projects</h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="indexPortfolio.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="mobilePortfolio.html">Mobile Projects</a>
+                        </li>
+                        <li>
+                            <a href="pcPortfolio.html">PC Projects</a>
+                        </li>
+                        <li>
+                            <a href="researchPortfolio.html">Research</a>
+                        </li>
+                        <li>
+                            <a href="contactPortfolio.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="contentWrapper">
+                    <div class="centredText">
+                        <h2>Biome Balance</h2>
+                        <p><i>
+                            3rd Year, Semester 2 University Assignment
+                            <br>February 2025 - May 2025
+                            <br><b>Built in Unity using C#</b>
+                        </i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Overview</h3>
+                        <p>Biome Balance is a PC-based god-game and ecosystem simulator built in Unity using C#. 
+                            The player manages an underwater coral reef by introducing species, maintaining biodiversity, and reacting to natural and human-made disruptions. 
+                            The game blends real-world ecological principles with accessible mechanics, encouraging players to experiment, learn, and care about the fragile balance of ocean biomes.
+                            <br><br>
+                            Developed over several months as my final-year university project, Biome Balance represents the largest and most complex game I've created to date; combining systems design, environmental messaging, and interactive storytelling into a single cohesive experience.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/BB%20SS5.png" alt="Screenshot during gameplay." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot during gameplay.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Design Process</h3>
+                        <p>The inspiration for Biome Balance came from my interest in coral reefs and a desire to better understand, and help others understand, just how delicate and complex these ecosystems really are. 
+                            I'd always been fascinated by the ocean, but it wasn't until I started researching reef biodiversity, human impact, and ecological tipping points that the idea for the game started to form. 
+                            I wanted to create something that was both interactive and educational but not in a preachy way, but by letting players explore how small changes could ripple through an entire ecosystem.
+                            <br><br>
+                            Rather than putting the player in direct control of individual animals or buildings, I designed the game around "god-like" systems management. 
+                            Players influence the reef by introducing new species, adjusting environmental factors, and responding to random events, not by micromanaging. 
+                            The goal is to maintain balance, not control everything.
+                            <br><br>
+                            I sketched out early flowcharts of how species would interact, what kinds of events could disrupt balance, and how the game might reflect real ecological relationships. 
+                            Much of the game's structure was designed to encourage experimentation, if a player introduces too many predators or lets pollution go unchecked, the system reacts. 
+                            But instead of punishing the player outright, the game nudges them to reflect and adjust.
+                            <br><br>
+                            The idea was always to build a space where learning happens through play. 
+                            Whether or not a player has any background knowledge of marine biology, they can still see the effects of overpopulation, habitat loss, or conservation and start to understand the real-world systems that inspired the game.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/BB%20UISketch.png" alt="Initial UI sketches and gameplay loop plans." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Initial UI sketches and gameplay loop plans.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Visual and Interface Design</h3>
+                        <p>While Biome Balance focuses heavily on systems, visual clarity and tone were just as important. 
+                            I designed a clean, semi-stylized underwater environment where each species is visually distinct. 
+                            Since this was a solo project, I modelled all 3D assets myself in Blender, aiming for readable silhouettes and a calming, colorful look that wouldn't overwhelm the player.
+                            <br><br>
+                            The UI was designed to reflect the layered nature of the game. 
+                            Tabs separate species management, research, and event logs, while hoverable elements give players the information they need without dumping data on them all at once. 
+                            The biodiversity percentage meter anchors the player's focus, providing a simple yet powerful readout of how balanced the reef is at any moment.
+                            <br><br>
+                            I made a point of aligning the UI with the game's tone, no harsh reds or flashing alerts, just soft gradients and readable fonts to reflect the natural setting. 
+                            Despite the complexity under the hood, the goal was always to make the game feel approachable.
+                        </p> 
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/BB%20SS3.png" alt="Screenshot of the species management UI." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot of the species management UI.</i></p>  
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Implementation</h3>
+                        <p>Biome Balance was developed in Unity using C#, with a large emphasis on modular systems and code reusability. 
+                            I created base classes for Species, which were then extended into Coral, Plant, and Animal subclasses. 
+                            This made it easy to add new species types with their own behaviours, while maintaining consistency in how they were tracked and managed.
+                            <br><br>
+                            Species spawn through a UI-driven button system that connects to a SpawnManager script. 
+                            Coral spawns on rocks, seagrass spawns on sand, and fish spawn in 3D space near terrain, moving using simple randomized behavior for now. 
+                            I implemented custom rules to prevent overcrowding and ensure spatial variety.
+                            <br><br>
+                            Each species contributes to or detracts from the biodiversity system, which calculates a running percentage based on species variety, ratios, and ecosystem health. 
+                            This directly affects Bio Point regeneration, the player's main resource for interventions and research.
+                            <br><br>
+                            Random events are handled by a modular EventSystemManager, which works with the BiomeManager to apply effects. 
+                            Each event has its own logic (e.g. reducing fish population, blocking coral spawning, offering free research boosts) and uses weighted probabilities to vary gameplay. 
+                            Events can be both positive or negative.
+                            <br><br>
+                            The research system allows players to unlock new layers of species info by investing Bio Points over time. 
+                            The system runs like a "subscription" and drain points continuously until a level is unlocked. 
+                            Each species has 3 levels of research, with more detailed information revealed at each tier (like habitat preference, predator relationships, and Bio Point contribution). 
+                            Difficulty level affects whether players can pause research, and what penalties apply for doing so.
+                            <br><br>
+                            I also implemented features like: species death and regen logic, interactive management tabs and info panels, custom alert system with vertical stacking and timed removal, and Bio Point UI with adjustable research allocation per category (animal, coral, plant)
+                            <br><br>
+                            Everything was built with extensibility in mind as I wanted the game to be playable, but also something I could build on later if I wanted.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/BB%20Sketch2.jpg" alt="Initial stats for corals & plants" width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Initial stats for corals & plants</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Playtesting and User Experience</h3>
+                        <p>Throughout development, I ran a few casual playtests, gathering feedback on both mechanics and UI clarity. 
+                            Early testers enjoyed the concept but found it difficult to tell if they were "doing well", which led me to introduce the biodiversity percentage tracker and clearer feedback via alerts and hoverable info cards.
+                            <br><br>
+                            The UI was restructured based on feedback to reduce information overload, tabs were added to separate species, research, and events. 
+                            I also added soft haptic-style feedback (animations, glows) to give the player a sense of impact when they introduced a species or triggered an event.
+                            <br><br>
+                            Difficulty scaling was tested by adjusting BioPoint regeneration, event intensity, and research flexibility. 
+                            I tried to balance the game being relaxing and exploratory, while also requiring some strategic resource management and quick responses to disasters.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/BB%20SS1.png" alt="Screenshot of the initial opening UI." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot of the initial opening UI.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Reflection</h3>
+                        <p>Biome Balance was the biggest project I've worked on so far, and I'm really proud of what I achieved especially in terms of combining real-world ecological ideas with a thoughtful, engaging gameplay loop. 
+                            It challenged me to think beyond mechanics and consider how systems, visuals, and information all work together to create a meaningful experience.
+                            <br><br>
+                            Looking ahead, one of the main features I'd like to add is a proper difficulty setting system. 
+                            While the game currently functions with a balanced default mode, difficulty options could introduce more challenge for experienced players, 
+                            like harsher events, slower Bio Point regeneration, or stricter limits on interventions, without changing the core mechanics.
+                            <br><br>
+                            I also explored the idea of adding multiple biomes, beyond just coral reefs. 
+                            Rainforests, savannahs, cold water environments, and tundras all offer unique ecosystems that could be adapted to the existing gameplay framework. 
+                            I ended up focusing solely on the coral reef for this version, since adding new biomes would have required creating a large number of extra assets, UI tweaks, and balancing changes. 
+                            I made a conscious decision to prioritize quality over quantity, especially as this was a university assignment, and I ensured the reef biome was strong, playable, and polished before thinking of expanding.
+                            <br><br>
+                            Overall, I'm really proud of how Biome Balance turned out, not just because of the systems I built, but because of what the game represents. 
+                            It's a project that helped me grow as a designer, developer, and researcher, and one I'd love to keep developing in the future.
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <div class="footer">
+                <p>Alex Burghes | 2025 | All rights reserved</p>
+            </div>
+        </div>
+        <script src="mainPortfolio.js"></script>
+    </body>
+</html>

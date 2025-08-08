@@ -1,0 +1,228 @@
+/*GENERAL BODY*/
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;  
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1; 
+}
+
+/*CONTENT WRAPPER*/
+.contentWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+@media (max-width: 1200px) {
+    .contentWrapper {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+
+@media (max-width: 800px) {
+    .contentWrapper {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contentWrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/*MAIN TEXT*/
+h1 {
+    text-align: center;
+    color: #b89137;
+    font-size: 4em;
+    padding: 15px;
+    margin: 0;
+}
+h2 {
+    text-align: center;
+    color: #b89137;
+    font-size: 3em;
+    padding: 15px;
+    margin: 0;
+}
+h3 {
+    text-align: center;
+    color: #b89137;
+    font-size: 2em;
+    padding: 15px;
+    margin: 0;
+}
+p {
+    font-size: 1em; 
+    text-align: justify;
+    line-height: 135%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+
+/*SPECIFIC TEXT OR ELEMENTS*/
+.centredText p {
+    text-align: center;
+}
+.qualifications li {
+    font-size: 1em;
+    text-align: justify;
+    line-height: 135%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.inProgressSection {
+    background-color: #d94848;
+    padding: 1em;;
+}
+.inProgressSection p {
+    text-align: center;
+}
+.centeredImage {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    padding-top: 15px;
+}
+.centeredImageRounded {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    padding-top: 15px;
+    border-radius: 50px;
+}
+.imageDescription {
+    text-align: center;
+    font-size: 0.9em;
+}
+.essayText p {
+    line-height: 150%;
+}
+.essayText p b {
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+
+
+/*HEADER*/
+header {
+    background-color: #b89137;
+    color: black;
+    position: sticky;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 20px;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+}
+header nav li {
+    text-align: center;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    transition: font-weight 0.2s ease;
+}
+header nav a {
+    text-decoration: none;
+    color: black;
+}
+header nav a:hover {
+    font-weight: bold;
+}
+/* Medium screens: 3 on top row, 2 on bottom */
+@media (max-width: 900px) {
+    header nav ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+    }
+    /* Make the last two items start on second row */
+    header nav li:nth-child(4) {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+    header nav li:nth-child(5) {
+        grid-column: 2 / 3;
+        grid-row: 2;
+    }
+}
+/* Small screens: stack vertically */
+@media (max-width: 500px) {
+    header nav ul {
+        grid-template-columns: 1fr;
+    }
+    header nav li:nth-child(4),
+    header nav li:nth-child(5) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+/*FOOTER*/
+.footer {
+    margin-top: 25px;
+    padding: 50px;
+    background-color: #b89137;
+}
+.footer p {
+    text-align: right;
+}
+
+/*PROJECT BUTTONS*/
+.projectNav {
+    padding: 1rem;
+    background-color: transparent; /* Remove full-width look */
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.projectList {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 250px));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+.projectList li {
+    background-color: #b89137;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;;
+}
+.projectList a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.projectList a:hover {
+    font-weight: bold;
+}
+
+
+

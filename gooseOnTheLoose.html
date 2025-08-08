@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Goose On The Loose</title>
+        <link href="stylesPortfolio.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="pageWrapper">
+            <h1>Mobile Projects</h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="indexPortfolio.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="mobilePortfolio.html">Mobile Projects</a>
+                        </li>
+                        <li>
+                            <a href="pcPortfolio.html">PC Projects</a>
+                        </li>
+                        <li>
+                            <a href="researchPortfolio.html">Research</a>
+                        </li>
+                        <li>
+                            <a href="contactPortfolio.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="contentWrapper">
+                    <div class="centredText">
+                        <h2>Goose On The Loose</h2>
+                        <p><i>
+                            3rd Year, Semester 2 University Assignment
+                            <br>May 2025 - June 2025
+                            <br><b>Built in Unity using C#</b>
+                        </i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Overview</h3>
+                        <p>Goose on the Loose is a mobile endless runner game where players control a rogue goose attempting to flee across the University of York campus. 
+                            Inspired by chaotic animal-centric games like Untitled Goose Game and fast-paced mobile titles like Jetpack Joyride, the game blends humor, speed, and simple controls into a uniquely student-themed experience. 
+                            Players must dodge obstacles, collect bread to restore health, and survive for as long as possible while their score climbs.
+                            <br><br>The game was designed specifically for mobile interaction, utilizing the device's accelerometer as its core control input. 
+                            Rather than relying on touch-based movement, the goose's vertical motion is controlled entirely by tilting the device, making the game feel physical, reactive, and inherently portable. 
+                            Set against a backdrop of exaggerated university hazards (such as tumbling bins, speeding bikes, and suspicious textbooks), Goose on the Loose delivers an accessible but chaotic experience aimed at casual players and students alike.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/GOTL%20SS1.jpg" alt="Screenshot of the home page UI." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot of the home page UI.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Design Process</h3>
+                        <p>The design process began with rough sketching.
+                            I wanted to get ideas out quickly and explore how the goose would move through the environment, what types of obstacles might appear, and how power-ups could be visually represented. 
+                            I sketched layouts of the side-scrolling levels, early UI ideas, and potential obstacle types like cyclists and WiFi lasers, keeping it loose and playful. 
+                            These sketches helped guide both the level design and the tone of the game: something chaotic, but funny and recognisable to anyone familiar with campus life.
+                            <br><br>
+                            At first, I wasnt sure which graphics to use, but I did know that I wanted to make them myself.
+                            I was torn between pixel art and creating my own 3D assets which would of be exported to a 2D sprite.
+                            In the end pixel art won out, it was both a stylistic and practical choice plus I love the charm and clarity of well-done pixel art, and it suited the fast-paced, light-hearted nature of the game. 
+                            It also meant I could create all the assets relatively quickly without needing high-end digital painting skills or large resolution textures, which helped me stay focused on gameplay and mechanics rather than getting bogged down in detailed visuals.
+                            <br><br>
+                            To create the pixel art assets, I used the online browser: Pixelart.com. 
+                            It's a simple but effective platform that let me design everything directly in-browser. 
+                            I started with some simple objects to get into the pixel mindset, followed by the playable character, the goose, focusing on keeping it readable and expressive in motion. 
+                            From there, I moved on to obstacles and the background, while trying to reuse a limited colour palette to keep the visuals cohesive. 
+                            Designing within pixel constraints was a fun challenge, especially making sure everything was visually distinct without being overly busy.
+                            <br><br>
+                            Throughout the process, I wanted to lean into exaggeration and humour.
+                            The visual design wasn't just aesthetic - it helped support the gameplay rhythm, cue players to upcoming hazards, and reinforce the ridiculous tone of the game. 
+                            By the time the assets were all in, the look and feel of Goose on the Loose felt exactly right: bold, silly, and fast-paced.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/GOTL%20UISketch.png" alt="Initial sketches of the UI menu" width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Initial sketches of the UI menu.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Implementation</h3>
+                        <p>Goose on the Loose was developed in Unity using C#, with a focus on making gameplay feel smooth and reactive on mobile devices. 
+                            I began with a very basic prototype, using placeholder graphics and simple blocks to test movement, pacing, and screen space. 
+                            At that stage, I hadn't fully decided on the visual direction, so the early builds were all about getting the mechanics right first, especially the core movement system.
+                            <br><br>
+                            The goose is controlled using the device's accelerometer, letting players tilt their phone left or right to dodge incoming obstacles. 
+                            I wanted the movement to feel light and responsive, so I experimented with tilt sensitivity, smoothing, and clamping to keep the goose from drifting too far off-screen. 
+                            <br><br>
+                            Obstacles spawn procedurally as the player moves through the level. 
+                            I designed a mix of smaller, more frequent hazards, like rubbish, alongside larger, less frequent obstacles like buses and cyclists that take up more screen space. 
+                            Some obstacles are interactive: for example, bins can be knocked over, spilling additional rubbish that the player has to dodge. 
+                            Several obstacles also spawn in with accompanying sound effects to enhance feedback and create a more reactive world.
+                            <br><br>
+                            The only power-up in the game is bread, which restores health when collected. 
+                            It's placed between hazards to encourage risk-reward movement, giving players the chance to recover without breaking the game's momentum. 
+                            Collision and health management systems were handled using Unity's built-in physics and tag-based detection, with simple state checks to control player health and game over conditions.
+                            <br><br>
+                            Behind the scenes, the game uses a combination of loops, event triggers, and script references to manage obstacle spawning, scoring, health, and UI updates. 
+                            I used Unity's PlayerPrefs system to store and retrieve the player's high score, allowing it to persist between play sessions and across devices. 
+                            Different systems were separated into individual scripts, such as for movement, obstacle generation, and scoring, and interacted using method calls and public references. 
+                            This modular structure made it easier to debug and tweak specific mechanics during development.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/GOTL%20SS2.jpg" alt="Screenshot of the gameplay." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot of the gameplay.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Reflection</h3>
+                        <p>I'm really proud of how Goose on the Loose turned out, especially considering the time constraints and the fact that it was built solo. 
+                            That said, there's so much more I'd love to add. 
+                            The obstacle system is designed to be expandable, and I had lots of extra ideas that didn't make it into the final build, everything from students on scooters to food trucks and more interactive elements like low-hanging signs or slippery patches. 
+                            There's basically infinite room for chaos.
+                            <br><br>
+                            I also wanted to include additional power-ups. 
+                            The only one that made it in was bread, which restores health, but I'd love to bring in sillier, more transformative ones like a Mega Goose Mode, where the goose could crash through obstacles at high speed for a few seconds. 
+                            These kinds of moments would add variety and give players more of those satisfying, over-the-top game-feel moments.
+                            <br><br>
+                            Another idea I explored but didn't implement was location-aware gameplay. 
+                            The original concept involved tying the game's environment to the actual University of York campus, using GPS to determine which "zone" the player was in (like the library, Derwent, or the lake) and changing the types of obstacles and background visuals accordingly. 
+                            It would've been a cool way to make the game feel even more personal and grounded in the player's real-world experience, but it needed more time and testing than the project allowed.
+                            <br><br>
+                            Overall, Goose on the Loose was a great opportunity to mix fun mechanics with design thinking and technical experimentation. 
+                            It's the kind of project I'd love to keep expanding post-deadline, because honestly, I don't think I'll ever run out of ideas for what a rogue goose could get up to.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/GOTL%20SS4.jpg" alt="Screenshot of the pause menu." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot of the pause menu.</i></p>
+                    </div>
+                </div>
+            </main>
+            <div class="footer">
+                <p>Alex Burghes | 2025 | All rights reserved</p>
+            </div>
+        </div>
+        <script src="mainPortfolio.js"></script>
+    </body>
+</html>

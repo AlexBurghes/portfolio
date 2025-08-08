@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Game Tracker</title>
+        <link href="stylesPortfolio.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="pageWrapper">
+            <h1>Mobile Projects</h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="indexPortfolio.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="mobilePortfolio.html">Mobile Projects</a>
+                        </li>
+                        <li>
+                            <a href="pcPortfolio.html">PC Projects</a>
+                        </li>
+                        <li>
+                            <a href="researchPortfolio.html">Research</a>
+                        </li>
+                        <li>
+                            <a href="contactPortfolio.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="contentWrapper">
+                    <div class="centredText">
+                        <h2>Game Tracker</h2>
+                        <p><i>
+                            3rd Year, Semester 1 University Assignment
+                            <br>Jan 2025   
+                            <br><b>Built in Android Studio using Kotlin</b>                     
+                        </i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Overview</h3>
+                        <p>Game Tracker is a mobile app designed to help users keep track of the games they've played, are currently playing, or plan to play. 
+                            Built in Android Studio using Kotlin, the app allows users to log titles, platforms, progress status, and personal notes in a clean and simple interface. 
+                            It was designed as a practical tool for both casual and serious gamers who want an easy way to manage their backlog without relying on cluttered spreadsheets or memory alone.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/GT%20SS1.png" alt="Photo of the initial welcome screen when you first open the app." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Welcome screen for first time opening.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Desgin Process</h3>
+                        <p>The idea for Game Tracker came from my own experience trying to remember which games I'd started, which ones I'd dropped, and which I was excited to try next. 
+                            I started by sketching out a simple layout; one that would make adding and reviewing games quick and satisfying. 
+                            I didn't want the UI to feel bloated or overcomplicated, so I focused on a minimal card-based design with clearly separated fields for title, platform, progress, and notes.
+                            <br><br>
+                            Progress tracking was a key part of the design. 
+                            I wanted users to easily mark games as "Not Started," "Playing," "Paused," or "Completed," and eventually added simple color-coded indicators to reflect those states at a glance. 
+                            I also paid attention to input flow, making sure adding a new game felt lightweight, not like filling out a form. 
+                            The result is something that feels personal, simple, and fast.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/GT%20Sketch1.jpg" alt="Photo of the initial brainstorming for the game tracker." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Initial brainstorming for app.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Implementation</h3>
+                        <p>The app was built in Android Studio using Kotlin, with a focus on maintaining clean separation between UI and data logic. 
+                            I used a RecyclerView to display the list of games, with each entry rendered as a custom card layout. 
+                            Users can add games via a separate form activity, and their entries are stored locally so the data persists between sessions.
+                            <br><br>
+                            I kept the data structure simple but scalable, using Kotlin classes to hold each game's info and implementing local storage (either through a file or SharedPreferences, depending on the version). 
+                            The app uses standard Android components like Intents, Adapters, and ViewHolders, with logic spread across multiple scripts to keep things modular and easy to maintain.
+                            <br><br>
+                            To make the app more dynamic, I integrated the Steam Web API. 
+                            This allowed users to search for and add games directly from Steam's database, and also fetch achievement data for any linked titles. 
+                            This gave the app a smarter, more automated feel, users didn't have to manually input everything, and it added extra context to each game.
+                            <br><br>
+                            Separately, I developed a sign-in system where users could link their Steam account to automatically sync their library and achievements. 
+                            However, since this required user authentication and secure API key access, I removed the login system for the final version so it could be marked and tested without external dependencies. 
+                            The core sign-in code is still commented out in the project for future use or to reference back to if I need.
+                            <br><br>
+                            As a smaller technical exercise, I also experimented with camera and gallery access, allowing users to attach a photo to a game entry. 
+                            This wasn't a core feature but helped me practice working with Android's permissions and media APIs.
+                            <br><br>
+                            Throughout development, I made use of loops, conditional statements, and script communication to handle actions like filtering, sorting, and updating entries. 
+                            I also made sure to include features like editing existing entries and high-level progress summaries, ensuring the app stayed useful even as users added more games.
+                        </p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/GT%20SS3.png" alt="Photo of steam API sign in." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Steam API sign in page.</i></p>
+                        <img src="file:///C:/Users/sarab/Desktop/Portfolio/Pics/GT%20SS2.png" alt="Screenshot of stardew valley tracker page on the app." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Example of Stardew Valley tracker.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Reflection</h3>
+                        <p>This project gave me the chance to build something both useful and personal, while also exploring API integration and mobile system features. 
+                            If I were to expand Game Tracker, I'd start by reactivating the Steam account sign-in to allow full syncing of game libraries and achievement progress. 
+                            With that, the app could become a more powerful and automatic tracking tool and one that pulls in game data rather than relying on manual entry.
+                            <br><br>
+                            I'd also like to develop advanced filtering, sorting, and analytics tools, like viewing completion stats over time, or sorting games by genre or platform. 
+                            The core obstacle here wasn't technical difficulty but time and project scope.
+                            <br><br>
+                            Practicing with things like camera access, real-time data fetching, and account integration gave me valuable insight into Android's capabilities and made this project more than just a list app. 
+                            It became a small ecosystem of game tracking features that I'm excited to expand on in the future.
+                            </p>
+                    </div>
+
+                </div>
+            </main>
+            <footer>
+                <div class="footer">
+                    <p>Alex Burghes | 2025 | All rights reserved</p>
+                </div>
+            </footer>
+        </div>
+
+        <script src="mainPortfolio.js"></script>
+    </body>
+</html>
