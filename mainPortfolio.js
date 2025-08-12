@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.text())
         .then(data => {
             // Insert the navbar HTML into the placeholder div
-            document.getElementById("navbar").innerHTML = data;
+            document.querySelector(".navbar").innerHTML = data;
 
         })
         .catch(error => console.error("Error loading navbar:", error));
