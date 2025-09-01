@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Biscuit Blitz</title>
+        <link href="stylesPortfolio.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="pageWrapper">
+            <h1>PC Projects</h1>
+            <div class="navbar"></div>
+            <main>
+                <div class="contentWrapper">
+                    <div class="centredText">
+                        <h2>Biscuit Blitz</h2>
+                        <p><i>
+                            Game Jam Project
+                            <br>August 2025
+                            <br><b>Built in Unity using C#</b>
+                            <br><a href="https://alexburghes.itch.io/biscuit-blitz">Available to play here (itch.io)</a>
+                        </i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Overview</h3>
+                        <p>
+                            Dive into a world of tea and biscuits! 
+                            Grab a pack, dunk your favorite biscuits into steaming cups of tea, and see how long you can last without soggy disasters. 
+                            Fast-paced, sticky, and utterly delicious!
+                            <br><br>
+                            Biscuit Blitz is a short, arcade-style PC game built for a one-week game jam.
+                            The theme of the game jam was "risk it for the biscuit".
+                            <br><br>
+                            Players are given a packet of biscuits, with each biscuit acting as a "round." 
+                            The goal is to dunk as many biscuits into a cup of tea as possible without letting them break. 
+                            Timing is key: dunk too early and the biscuit won't score, leave it too long and it risks going soggy and falling apart. 
+                            The player's score accumulates across biscuits, with the game ending either when the packet is finished or when a biscuit breaks.
+                        </p>
+                        <img src="Pics/BBlitz SS1.png" alt="Screenshot of the Main Menu." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot of the Main Menu.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Design</h3>
+                        <p>
+                            The design focuses on simplicity and humour, turning the familiar act of dunking biscuits into a tense, skill-based challenge. 
+                            Each biscuit has a randomly generated "safe dunk time," forcing players to judge when to press the spacebar. 
+                            The randomness ensures replayability, as no two biscuits play out exactly the same. 
+                            Pixel art visuals and playful animations, all created by me, reinforce the lighthearted, jam-friendly aesthetic.
+                        </p>
+                        <img src="Pics/BBlitz SS2.png" alt="Screenshot during gameplay of a biscuit above a teacup." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot during gameplay.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Implementation</h3>
+                        <p>
+                            The game was built in Unity using C# over the course of a week. 
+                            A timing system assigns each biscuit a random dunk window, which ranges from 1 to 10 seconds. 
+                            The longer the player keeps the biscuit dunked in their teacup, the more their score increases.
+                            Score is calculated per successful dunk and added to a running total, while failure conditions (soggy or broken biscuits) immediately end the game. 
+                            Therefore players have to choose to risk their biscuit for more points, or play it safe.
+                            <br><br>
+                            The simple game loop is supported by a clean UI showing the remaining biscuits and total score. 
+                            All pixel art assets, including the biscuits, packet, and tea cup, were created by hand for the jam.
+                        </p>
+                        <img src="Pics/BBlitz SS3.png" alt="Screenshot of the game over screen." width="500" class="centeredImage">
+                        <p class="imageDescription"><i>Screenshot of the "game over" screen.</i></p>
+                    </div>
+
+                    <div class="projectInformation">
+                        <h3>Reflection</h3>
+                        <p>
+                            Biscuit Blitz was an exercise in designing a complete, self-contained game within a strict time limit. 
+                            The biggest challenge was balancing the randomness of the dunk timings so that the game felt unpredictable but fair. 
+                            Playtesting with family helped tune this balance and keep the core loop fun and tense. 
+                            Creating all of the pixel art assets myself also gave me practice in defining a cohesive, charming visual style under pressure.
+                            <br><br>
+                            I am currently working on adapting Biscuit Blitz into a mobile version as I believe that suits the style of the game. 
+                            This will involve reworking the control scheme for touch input, adjusting the UI and optimising the flow for shorter, more casual play sessions.
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <div class="footer">
+                <p>Alex Burghes | 2025 | All rights reserved</p>
+            </div>
+        </div>
+        <script src="mainPortfolio.js"></script>
+    </body>
+</html>
